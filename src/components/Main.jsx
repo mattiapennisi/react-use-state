@@ -14,8 +14,8 @@ export default function Main() {
                     technologies.map(tech =>
                         <div
                             key={tech.id}
-                            className={`btn ${tech.id === buttonId ? 'bg-warning' : 'bg-primary'} ${tech.id === buttonId ? 'text-black' : 'text-white'}`}
-                            onClick={() => setButtonId(tech.id)}
+                            className={`btn ${tech.id === buttonId ? 'bg-warning text-black' : 'bg-primary text-white'}`}
+                            onClick={() => setButtonId(buttonId === tech.id ? 0 : tech.id)}
                         >
                             {tech.title}
                         </div>
